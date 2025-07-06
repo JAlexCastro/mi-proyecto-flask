@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a class="volver" href="{{ url_for('index') }}" class="boton-volver">Volver al Inicio</a>
+    <h2>Iniciar Sesión</h2>
+
+    <form method="POST">
+        <label for="usuario">Usuario:</label><br>
+        <input type="text" name="usuario" required><br>
+
+        <label for="contrasena">Contraseña:</label><br>
+        <input type="password" name="contrasena" required><br><br>
+
+        <input type="submit" value="Iniciar sesión">
+    </form>
+
+    {% if mensaje %}
+        <hr>
+        <p>{{ mensaje }}</p>
+    {% endif %}
+</body>
+</html>

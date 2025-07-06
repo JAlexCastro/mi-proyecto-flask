@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <a class="volver" href="{{ url_for('index') }}" class="boton-volver">Volver al Inicio</a>
+    <h2>Calculo de compras</h2>
+
+    <form method="POST">
+        <label>Ingrese su nombre:</label><br>
+        <input type="text" name="nombre" required><br>
+
+        <label>Ingrese su edad:</label><br>
+        <input type="number" name="edad" required><br>
+
+        <label>Ingrese la cantidad de tarros de pinturas a comprar:</label><br>
+        <input type="number" name="cantidad_tarros" required><br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+
+    {% if resultado %}
+        <hr>
+        <h3>Resultado:</h3>
+        <p><strong>Nombre:</strong> {{ resultado.nombre }}</p>
+        <p><strong>Total sin descuento:</strong> ${{ "{:,.0f}".format(resultado.total_sin_descuento) }}</p>
+        <p><strong>Descuento:</strong> {{resultado.descontado}} ( un {{ resultado.descuento }} de descuento) </p>
+        <p><strong>Total con descuento:</strong> ${{ "{:,.0f}".format(resultado.total_con_descuento) }}</p>
+    {% endif %}
+</body>
+</html>
