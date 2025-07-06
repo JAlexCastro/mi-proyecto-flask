@@ -45,15 +45,15 @@ Página principal con menú: http://127.0.0.1:5000/
 
 ### Vista principal del sitio web
 
-![Proyecto](IMG/IMG_HOME.png)
+![Proyecto](main/static/IMG/IMG_HOME.png)
 
 ### Vista Ejercicio 1
 
-![Proyecto](IMG/IMG_EJERCICIO1.png)
+![Proyecto](main/static/IMG/IMG_EJERCICIO1.png)
 
 ### Vista Ejercicio 2
 
-![Proyecto](IMG/IMG_EJERCICIO2.png)
+![Proyecto](main/static/IMG/IMG_EJERCICIO2.png)
 
 
 ## Uso
